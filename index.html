@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI calculator</title>
     <h1>Calculate your BMI</h1>
+    <style>
+        h1{
+            display: inline-block;
+            padding: 4px;
+            border: 1px solid black;
+            box-shadow: 5px 10px;
+            opacity: 90%;
+        }
+        .button{
+
+            display: flex;
+            opacity: 90%;
+            box-shadow: 10px 5px rgb(149, 92, 92);
+            margin-top: 10pt;
+            font-family: fantasy;
+            font-size: 18pt;
+        }
+    </style>
+    <script>
+        function areYouSure(){
+            document.getElementsByClassName("button").onclick=alert("Are you sure?")
+        }
+    </script>
 </head>
 <body>
     
     <form action="/" method="POST"> 
-        <input type="text" name="weight" placeholder="Insert weight in kilograms"> 
+        <input type="text" name="weight" placeholder="Insert weight in kilograms">
         
         <input type="text" name="height" placeholder="Insert height in meters">
         
-        <button type="submit" name="submit">KALKULATE!!!</button> 
+        <button class="button" onclick="areYouSure()" type="submit" name="submit">CALCULATE</button> 
     
     
     </form>
